@@ -1,8 +1,8 @@
 
 ## Description
-This is a project to act as a wrapper over the wikipedia page count api.9
+This is a project to act as a wrapper over the wikipedia page count api
 It exposes 3 endpoints that can be used to retrieve information about either
-a particular article on Wikipedia or Top article for a specific timeframe.9
+a particular article on Wikipedia or Top article for a specific timeframe
 
 Here are some quick descriptions of the endpoints:
 
@@ -40,7 +40,5 @@ Which has documentation to make interacting with the endpoints easier.
 # unit tests
 $ yarn run test
 
-# e2e tests
-$ yarn run test:e2e
 
 
