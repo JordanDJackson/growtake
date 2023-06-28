@@ -1,6 +1,9 @@
 import {IsISO8601, IsNotEmpty, IsString} from "class-validator";
 import {ApiProperty} from "@nestjs/swagger";
 
+/**
+ * These classes are used to verify data before it can enter the controller
+ */
 export class MostViewedParams {
   @IsNotEmpty()
   @IsISO8601()

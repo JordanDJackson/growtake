@@ -1,4 +1,4 @@
-import {Injectable} from '@nestjs/common';
+import {HttpException, HttpStatus, Injectable} from '@nestjs/common';
 import {HttpService} from '@nestjs/axios';
 import {catchError, firstValueFrom} from 'rxjs';
 import {AxiosError} from 'axios';
@@ -100,7 +100,7 @@ export class AppService {
       this.httpService.get(wikipediaUrl).pipe(
         catchError((error: AxiosError) => {
           console.log(error.response.data);
-          throw 'Unable to retrieve data from Wikipedia';
+          throw new HttpException(error.response.data, HttpStatus.BAD_REQUEST);
         }),
       ),
     );
